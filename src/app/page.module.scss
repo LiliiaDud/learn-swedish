@@ -1,0 +1,19 @@
+@use "../styles/mixins" as *;
+@use "../styles/variables" as *;
+
+.hero {
+  @include section;
+}
+
+.title {
+  font-family: var(--font-cormorant);
+  font-size: 72px;
+  color: $primary;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-size: 22px;
+  color: $text-light;
+  max-width: 600px;
+}
