@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Container from "../shared/Container";
+import Navigation from "./Navigation";
 import styles from "./Header.module.scss";
 
 export default function Header() {
@@ -24,18 +25,9 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className={styles.nav}>
-            <Link href="/">Головна</Link>
-
-            <button className={styles.dropdown}>
-              Курси
-              <ChevronDown size={16} />
-            </button>
-
-            <Link href="/about">Про нас</Link>
-            <Link href="/blog">Блог</Link>
-            <Link href="/contacts">Контакти</Link>
-          </nav>
+          <div className={styles.desktopNav}>
+            <Navigation />
+          </div>
 
           {/* Right side */}
           <div className={styles.actions}>

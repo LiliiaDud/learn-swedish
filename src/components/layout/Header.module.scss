@@ -39,8 +39,14 @@
   font-size: 32px;
 }
 
-.nav {
+.desktopNav {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .desktopNav {
+    display: block;
+  }
 }
 
 .actions {

@@ -1,0 +1,62 @@
+@use "../../styles/variables" as *;
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  a,
+  button {
+    color: $primary;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.25s;
+  }
+
+  a:hover,
+  button:hover {
+    color: $accent;
+  }
+}
+
+.dropdown {
+  position: relative;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu {
+  position: absolute;
+  top: 38px;
+  left: -20px;
+
+  width: 240px;
+
+  background: white;
+  border-radius: 18px;
+  border: 1px solid $border;
+
+  box-shadow: $shadow;
+
+  padding: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  a {
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+
+  a:hover {
+    background: $surface-secondary;
+    color: $primary;
+  }
+}
