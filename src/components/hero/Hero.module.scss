@@ -1,0 +1,103 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  position: relative;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  height: 88vh;
+  min-height: 620px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(49, 77, 56, 0.72) 0%,
+    rgba(49, 77, 56, 0.35) 45%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+
+  z-index: 1;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 88vh;
+  max-width: 620px;
+}
+
+.label {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+//clamp -щоб не писати три font-size.
+.title {
+  font-family: var(--font-cormorant);
+  font-size: clamp(44px, 7vw, 76px);
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.button {
+  align-self: flex-start;
+
+  background: $accent;
+  color: white;
+
+  padding: 16px 28px;
+  border-radius: 999px;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: $accent-hover;
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .slide,
+  .content {
+    height: 78vh;
+    min-height: 560px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
