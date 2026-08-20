@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Container from "../shared/Container";
 import Navigation from "./Navigation";
@@ -10,8 +11,29 @@ import styles from "./Header.module.scss";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 40);
+    };
+
+    handleScroll();
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className={styles.header}>
+    <header
+      className={`${styles.header} ${
+        isHome && !isScrolled ? styles.transparent : styles.solid
+      }`}
+    >
       <Container>
         <div className={styles.wrapper}>
           {/* Logo */}
