@@ -10,8 +10,8 @@
 
 .slide {
   position: relative;
-  height: 88vh;
-  min-height: 620px;
+  height: 100vh;
+  min-height: 700px;
 }
 
 .image {
@@ -22,12 +22,18 @@
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-    90deg,
-    rgba(49, 77, 56, 0.72) 0%,
-    rgba(49, 77, 56, 0.35) 45%,
-    rgba(0, 0, 0, 0.1) 100%
-  );
+  background:
+    linear-gradient(
+      90deg,
+      rgba(49, 77, 56, 0.78) 0%,
+      rgba(49, 77, 56, 0.45) 42%,
+      rgba(49, 77, 56, 0.12) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(247, 243, 236, 0.18) 100%
+    );
 
   z-index: 1;
 }
@@ -42,8 +48,8 @@
   flex-direction: column;
   justify-content: center;
 
-  height: 88vh;
-  max-width: 620px;
+  height: 100vh;
+  max-width: 680px;
 }
 
 .label {
@@ -54,15 +60,17 @@
 //clamp -щоб не писати три font-size.
 .title {
   font-family: var(--font-cormorant);
-  font-size: clamp(44px, 7vw, 76px);
-  line-height: 0.95;
-  margin-bottom: 24px;
+  font-size: clamp(48px, 7vw, 82px);
+  line-height: 0.92;
+  margin-bottom: 28px;
+  font-weight: 500;
 }
 
 .text {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 36px;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 560px;
 }
 
 .button {
@@ -88,8 +96,8 @@
 @media (max-width: 768px) {
   .slide,
   .content {
-    height: 78vh;
-    min-height: 560px;
+    height: 100vh;
+    min-height: 620px;
   }
 
   .text {
@@ -100,4 +108,31 @@
     width: 100%;
     text-align: center;
   }
+}
+
+/* ===== Swiper Navigation ===== */
+
+.slider :global(.swiper-button-prev),
+.slider :global(.swiper-button-next) {
+  width: 30px;
+  height: 30px;
+
+  color: rgba(236, 229, 216, 0.8);
+
+  background: transparent;
+  border: none;
+
+  transition: 0.3s;
+}
+
+.slider :global(.swiper-button-prev:hover),
+.slider :global(.swiper-button-next:hover) {
+  color: #ffffff;
+  transform: scale(1.08);
+}
+
+.slider :global(.swiper-button-prev::after),
+.slider :global(.swiper-button-next::after) {
+  font-size: 18px;
+  font-weight: 300;
 }
