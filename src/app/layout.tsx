@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import Header from "@/components/layout/Header";
 import "./globals.scss";
 
 const cormorant = Cormorant_Garamond({
@@ -26,6 +27,7 @@ export default function RootLayout({
   return (
     <html lang="uk">
       <body className={`${manrope.variable} ${cormorant.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
