@@ -1,6 +1,7 @@
 import Hero from "@/components/hero/Hero";
 import Benefits from "@/components/home/Benefits";
 import AboutSection from "@/components/home/AboutSection";
+import CourseFormats from "@/components/home/CourseFormats";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Benefits />
       <AboutSection />
+      <CourseFormats />
     </main>
   );
 }
