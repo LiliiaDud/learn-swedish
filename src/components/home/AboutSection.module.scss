@@ -1,0 +1,103 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: 110px 0;
+}
+
+.grid {
+  display: grid;
+  gap: 48px;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.label {
+  color: $accent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.content h2 {
+  font-family: var(--font-cormorant);
+  color: $primary;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.text {
+  color: $text-light;
+  line-height: 1.8;
+  margin-bottom: 36px;
+  font-size: 17px;
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+
+  padding: 18px;
+  border-radius: 18px;
+  background: white;
+
+  h4 {
+    color: $primary;
+    margin-bottom: 6px;
+  }
+
+  p {
+    color: $text-light;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+.featureIcon {
+  width: 46px;
+  height: 46px;
+
+  border-radius: 50%;
+  background: $surface-secondary;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $primary;
+
+  flex-shrink: 0;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
