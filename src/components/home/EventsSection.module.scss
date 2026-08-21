@@ -1,0 +1,152 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: 110px 0;
+  background: $surface;
+}
+
+.heading {
+  max-width: 720px;
+  margin: 0 auto 48px;
+
+  text-align: center;
+
+  span {
+    display: inline-block;
+
+    color: $accent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: var(--font-cormorant);
+    font-size: clamp(38px, 5vw, 58px);
+    color: $primary;
+    line-height: 1.05;
+
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: $text-light;
+    line-height: 1.8;
+    font-size: 17px;
+  }
+}
+
+.link {
+  color: $primary;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 22px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  min-height: 260px;
+}
+
+.featured {
+  min-height: 540px;
+}
+
+.image {
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.58));
+}
+
+.info {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+
+  color: white;
+
+  h3 {
+    margin: 14px 0 10px;
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  p {
+    opacity: 0.85;
+    font-size: 14px;
+  }
+}
+
+.badge {
+  display: inline-block;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+
+  padding: 8px 12px;
+  border-radius: 999px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 36px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: $primary;
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  &:hover {
+    color: $accent;
+    transform: translateX(3px);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1.3fr 1fr;
+  }
+  .heading {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .featured {
+    grid-row: span 2;
+  }
+}
