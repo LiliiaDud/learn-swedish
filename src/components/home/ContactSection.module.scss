@@ -1,0 +1,53 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: 110px 0;
+  background: white;
+}
+
+.wrapper {
+  background: $background;
+  border-radius: 36px;
+  padding: 48px;
+
+  display: grid;
+  gap: 40px;
+}
+
+.info {
+  span {
+    color: $accent;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-family: var(--font-cormorant);
+    font-size: clamp(38px, 5vw, 54px);
+    color: $primary;
+    margin: 14px 0 18px;
+  }
+
+  p {
+    color: $text-light;
+    line-height: 1.8;
+    margin-bottom: 28px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    color: $primary;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}

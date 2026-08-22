@@ -4,6 +4,7 @@ import AboutSection from "@/components/home/AboutSection";
 import CourseFormats from "@/components/home/CourseFormats";
 import TestBanner from "@/components/home/TestBanner";
 import EventsSection from "@/components/home/EventsSection";
+import ContactSection from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CourseFormats />
       <TestBanner />
       <EventsSection />
+      <ContactSection />
     </main>
   );
 }
