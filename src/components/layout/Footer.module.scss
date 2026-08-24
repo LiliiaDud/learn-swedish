@@ -1,0 +1,99 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  background: $primary;
+  color: rgba(255, 255, 255, 0.82);
+
+  padding: 70px 0 26px;
+}
+
+.grid {
+  display: grid;
+  gap: 42px;
+}
+
+.logo {
+  font-family: var(--font-cormorant);
+  font-size: 36px;
+  color: white;
+}
+
+.slogan {
+  margin-top: 14px;
+  line-height: 1.8;
+  max-width: 280px;
+}
+
+.grid h4 {
+  color: white;
+  margin-bottom: 18px;
+  font-size: 17px;
+}
+
+.grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.grid a:hover {
+  color: $accent;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+
+  a {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+  }
+
+  a:hover {
+    background: $accent;
+    color: white;
+  }
+}
+
+.bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}
