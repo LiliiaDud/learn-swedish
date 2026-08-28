@@ -1,0 +1,35 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  padding: 140px 0 90px;
+  background: $background;
+}
+
+.content {
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: $accent;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: var(--font-cormorant);
+  color: $primary;
+  font-size: clamp(52px, 7vw, 82px);
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+
+.description {
+  max-width: 650px;
+  color: $text-light;
+  font-size: 18px;
+  line-height: 1.8;
+}
