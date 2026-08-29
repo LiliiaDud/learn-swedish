@@ -1,0 +1,63 @@
+@use "../../../styles/variables" as *;
+
+.page {
+  min-height: 100vh;
+}
+
+.hero {
+  padding: 160px 0 90px;
+
+  background: $background;
+}
+
+.content {
+  max-width: 760px;
+}
+
+.level {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: $accent;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.title {
+  margin-bottom: 24px;
+
+  color: $primary;
+
+  font-family: var(--font-cormorant);
+
+  font-size: clamp(48px, 7vw, 76px);
+  line-height: 0.95;
+}
+
+.description {
+  max-width: 680px;
+
+  color: $text-light;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 130px 0 70px;
+  }
+
+  .title {
+    font-size: clamp(44px, 13vw, 60px);
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
