@@ -1,0 +1,56 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: 40px 0 120px;
+  background: $background;
+}
+
+.heading {
+  max-width: 650px;
+  margin: 0 auto 55px;
+  text-align: center;
+
+  span {
+    color: $accent;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  h2 {
+    margin: 14px 0;
+    color: $primary;
+    font-family: var(--font-cormorant);
+    font-size: clamp(40px, 5vw, 58px);
+    line-height: 1;
+  }
+
+  p {
+    color: $text-light;
+    font-size: 17px;
+    line-height: 1.8;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 70px 0 90px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
