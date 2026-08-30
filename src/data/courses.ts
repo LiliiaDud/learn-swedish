@@ -5,6 +5,18 @@ export type Course = {
   level?: string;
   href: string;
   icon: string;
+
+  about: string;
+
+  audience: string;
+
+  program: string[];
+
+  format: string;
+
+  schedule: string;
+
+  price?: string;
 };
 
 export const courses: Course[] = [
@@ -16,6 +28,26 @@ export const courses: Course[] = [
     level: "A1 — B2",
     href: "/courses/adults",
     icon: "📚",
+
+    about:
+      "Курс допоможе вам системно вивчати шведську мову, розвивати словниковий запас, граматику та навички живого спілкування.",
+
+    audience:
+      "Ви хочете впевнено використовувати шведську у повсякденному житті, роботі та спілкуванні у Швеції.",
+
+    program: [
+      "Граматика та структура шведської мови",
+      "Розширення словникового запасу",
+      "Розмовна практика",
+      "Аудіювання та вимова",
+      "Практичні ситуації з повсякденного життя",
+    ],
+
+    format: "Онлайн-заняття у невеликих групах",
+
+    schedule: "Понеділок, середа, п'ятниця о 20:00",
+
+    price: "3000 SEK / 3 місяці",
   },
   {
     id: "kids",

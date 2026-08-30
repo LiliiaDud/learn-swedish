@@ -1,4 +1,5 @@
 import Container from "@/components/shared/Container";
+import CourseDetails from "@/components/courses/CourseDetails";
 
 import { courses } from "@/data/courses";
 
@@ -44,6 +45,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
           </div>
         </Container>
       </section>
+      <CourseDetails course={course} />
     </main>
   );
 }
