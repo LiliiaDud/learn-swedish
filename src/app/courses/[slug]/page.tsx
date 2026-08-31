@@ -1,6 +1,6 @@
 import Container from "@/components/shared/Container";
 import CourseDetails from "@/components/courses/CourseDetails";
-
+import CourseCTA from "@/components/courses/CourseCTA";
 import { courses } from "@/data/courses";
 
 import styles from "./course.module.scss";
@@ -46,6 +46,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
         </Container>
       </section>
       <CourseDetails course={course} />
+      <CourseCTA course={course} />
     </main>
   );
 }

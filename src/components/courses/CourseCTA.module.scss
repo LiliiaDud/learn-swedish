@@ -1,0 +1,80 @@
+@use "../../styles/variables" as *;
+
+.section {
+  padding: 90px 0;
+  background: $background;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 55px 60px;
+  background: $accent;
+  border-radius: 28px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  //   color: $accent;
+  color: $primary;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.content h2 {
+  max-width: 600px;
+  margin-bottom: 16px;
+  color: white;
+  font-family: var(--font-cormorant);
+  font-size: clamp(38px, 5vw, 54px);
+  line-height: 1;
+}
+
+.content p {
+  max-width: 560px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 15px 26px;
+  border-radius: 999px;
+  background: white;
+  color: $primary;
+  font-size: 15px;
+  font-weight: 700;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 30px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
