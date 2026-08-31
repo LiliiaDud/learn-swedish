@@ -1,15 +1,18 @@
 "use client";
 
+import { useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
+
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import styles from "./ContactForm.module.scss";
 
 const schema = z.object({
-  name: z.string().min(2, "Введіть ім’я"),
+  name: z.string().trim().min(2, "Введіть ім’я"),
 
-  phone: z.string().min(8, "Вкажіть телефон"),
+  phone: z.string().trim().min(8, "Вкажіть телефон"),
 
   email: z.email("Некоректний email"),
 
@@ -20,15 +23,73 @@ const schema = z.object({
 
 type FormData = z.infer<typeof schema>;
 
+const courseOptions = [
+  {
+    value: "adults",
+    label: "Курси для дорослих",
+  },
+  {
+    value: "kids",
+    label: "Курси для дітей",
+  },
+  {
+    value: "conversation",
+    label: "Розмовні курси",
+  },
+  {
+    value: "book-club",
+    label: "Читацький клуб",
+  },
+  {
+    value: "exam",
+    label: "Підготовка до іспитів",
+  },
+  {
+    value: "individual",
+    label: "Індивідуальні заняття",
+  },
+  {
+    value: "fika",
+    label: "Fika",
+  },
+  {
+    value: "saturday",
+    label: "Самостійне навчання",
+  },
+  {
+    value: "consultation",
+    label: "Потрібна консультація",
+  },
+];
+
 export default function ContactForm() {
+  const searchParams = useSearchParams();
+
+  const selectedCourse = searchParams.get("course");
+
   const {
     register,
     handleSubmit,
     reset,
+    setValue,
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(schema),
+
+    defaultValues: {
+      course: "",
+    },
   });
+
+  useEffect(() => {
+    const isValidCourse = courseOptions.some(
+      (option) => option.value === selectedCourse,
+    );
+
+    if (isValidCourse) {
+      setValue("course", selectedCourse as string);
+    }
+  }, [selectedCourse, setValue]);
 
   const onSubmit = (data: FormData) => {
     console.log(data);
@@ -42,32 +103,35 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <div>
         <input {...register("name")} placeholder="Ім’я" />
+
         <span>{errors.name?.message}</span>
       </div>
 
       <div>
         <input {...register("phone")} placeholder="Телефон / Telegram" />
+
         <span>{errors.phone?.message}</span>
       </div>
 
       <div>
         <input {...register("email")} placeholder="Email" />
+
         <span>{errors.email?.message}</span>
       </div>
 
       <div>
-        <select {...register("course")} defaultValue="">
+        <select {...register("course")}>
           <option value="" disabled>
             Що вас цікавить?
           </option>
-          <option>Курси для дорослих</option>
-          <option>Курси для дітей</option>
-          <option>Розмовні курси</option>
-          <option>Читацький клуб</option>
-          <option>Підготовка до іспитів</option>
-          <option>Індивідуальні заняття</option>
-          <option>Потрібна консультація</option>
+
+          {courseOptions.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
+            </option>
+          ))}
         </select>
+
         <span>{errors.course?.message}</span>
       </div>
 
