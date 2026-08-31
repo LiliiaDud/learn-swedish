@@ -1,0 +1,187 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  padding: 150px 0 90px;
+
+  background: $background;
+}
+
+.heroContent {
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: inline-block;
+
+  margin-bottom: 16px;
+
+  color: $accent;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+
+  color: $primary;
+
+  font-family: var(--font-cormorant);
+
+  font-size: clamp(56px, 8vw, 96px);
+
+  line-height: 0.95;
+}
+
+.hero p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: $text-light;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+.contact {
+  padding: 100px 0;
+
+  background: white;
+}
+
+.grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 100px;
+
+  align-items: start;
+}
+
+.info {
+  max-width: 560px;
+}
+
+.info h2 {
+  margin: 0 0 24px;
+
+  color: $primary;
+
+  font-family: var(--font-cormorant);
+
+  font-size: clamp(42px, 5vw, 64px);
+
+  line-height: 1;
+}
+
+.info > p {
+  max-width: 500px;
+
+  margin-bottom: 50px;
+
+  color: $text-light;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+.details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.details div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.details span {
+  color: $text-light;
+
+  font-size: 13px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.details a {
+  color: $primary;
+
+  font-size: 17px;
+
+  transition: color 0.3s ease;
+}
+
+.details a:hover {
+  color: $accent;
+}
+
+.formWrapper {
+  padding: 40px;
+
+  background: $background;
+
+  border-radius: 24px;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 130px 0 70px;
+  }
+
+  .contact {
+    padding: 80px 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .info {
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 110px 0 60px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .contact {
+    padding: 60px 0;
+  }
+
+  .grid {
+    gap: 40px;
+  }
+
+  .info h2 {
+    font-size: 44px;
+  }
+
+  .formWrapper {
+    padding: 24px 18px;
+
+    border-radius: 18px;
+  }
+}
