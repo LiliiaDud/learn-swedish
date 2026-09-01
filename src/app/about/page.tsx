@@ -102,6 +102,68 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <section className={styles.why}>
+        <Container>
+          <div className={styles.whyGrid}>
+            <div className={styles.whyIntro}>
+              <span className={styles.eyebrow}>Чому Learn Swedish?</span>
+
+              <h2>
+                Вивчаємо мову
+                <br />
+                разом із культурою
+              </h2>
+
+              <p>
+                Ми допомагаємо не просто вивчити шведські слова та правила, а
+                впевнено почуватися у шведському середовищі.
+              </p>
+            </div>
+
+            <div className={styles.whyList}>
+              <article className={styles.whyItem}>
+                <span className={styles.whyIcon}>♡</span>
+
+                <div>
+                  <h3>Україномовні викладачі та носії мови</h3>
+
+                  <p>
+                    Пояснюємо складне простою мовою та допомагаємо зрозуміти
+                    особливості шведської.
+                  </p>
+                </div>
+              </article>
+
+              <article className={styles.whyItem}>
+                <span className={styles.whyIcon}>☕</span>
+
+                <div>
+                  <h3>Культурна адаптація</h3>
+
+                  <p>
+                    Вчимо не лише мови, а й розуміти шведський менталітет,
+                    традиції та повсякденне життя.
+                  </p>
+                </div>
+              </article>
+
+              <article className={styles.whyItem}>
+                <span className={styles.whyIcon}>+</span>
+
+                <div>
+                  <h3>Тепле співтовариство</h3>
+
+                  <p>
+                    Підтримка, нові знайомства та можливість практикувати
+                    шведську без страху помилитися.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </Container>
+      </section>
     </main>
   );
 }
