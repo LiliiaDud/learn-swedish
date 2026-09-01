@@ -73,6 +73,70 @@
   object-fit: cover;
 }
 
+.approach {
+  padding: 110px 0;
+  background: $background;
+}
+
+.approachHeader {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.approachHeader h2 {
+  margin: 0;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(42px, 5vw, 54px);
+  line-height: 1.05;
+}
+
+.approachHeader > p {
+  max-width: 430px;
+  margin: 0;
+  color: $text-light;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.approachCard {
+  padding: 40px;
+  background: white;
+  border-radius: 24px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.approachCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(54, 65, 75, 0.08);
+}
+
+.approachCard h3 {
+  margin: 0 0 16px;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.approachCard p {
+  margin: 0;
+  color: $text-light;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
 @media (max-width: 992px) {
   .story {
     padding: 80px 0;
@@ -89,6 +153,25 @@
 
   .storyVisual {
     min-height: 400px;
+  }
+
+  .approach {
+    padding: 80px 0;
+  }
+
+  .approachHeader {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .approachHeader > p {
+    max-width: 650px;
+  }
+
+  .approachGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
@@ -117,5 +200,22 @@
 
   .storyContent p {
     font-size: 16px;
+  }
+
+  .approach {
+    padding: 70px 0;
+  }
+
+  .approachHeader {
+    margin-bottom: 40px;
+  }
+
+  .approachHeader h2 {
+    font-size: 44px;
+  }
+
+  .approachGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 }

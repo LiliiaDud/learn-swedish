@@ -53,6 +53,55 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <section className={styles.approach}>
+        <Container>
+          <div className={styles.approachHeader}>
+            <div>
+              <span className={styles.eyebrow}>Наш підхід</span>
+
+              <h2>
+                Навчання, яке працює
+                <br />у реальному житті
+              </h2>
+            </div>
+
+            <p>
+              Ми поєднуємо системність, живу практику та підтримку, щоб шведська
+              стала частиною вашого повсякденного життя.
+            </p>
+          </div>
+
+          <div className={styles.approachGrid}>
+            <article className={styles.approachCard}>
+              <h3>Особистий підхід</h3>
+
+              <p>
+                Помічаємо сильні сторони кожного студента та допомагаємо
+                працювати саме над тим, що потребує уваги.
+              </p>
+            </article>
+
+            <article className={styles.approachCard}>
+              <h3>Практичний результат</h3>
+
+              <p>
+                Вчимо мову для реального життя: роботи, навчання, спілкування та
+                повсякденних ситуацій у Швеції.
+              </p>
+            </article>
+
+            <article className={styles.approachCard}>
+              <h3>Натхнена спільнота</h3>
+
+              <p>
+                Навчання стає легшим, коли поруч люди, які проходять схожий шлях
+                і можуть підтримати одне одного.
+              </p>
+            </article>
+          </div>
+        </Container>
+      </section>
     </main>
   );
 }
