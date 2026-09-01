@@ -31,12 +31,91 @@
   line-height: 1.7;
 }
 
+.story {
+  padding: 110px 0;
+  background: white;
+}
+
+.storyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.storyContent {
+  max-width: 620px;
+}
+
+.storyContent h2 {
+  margin: 0 0 30px;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(42px, 5vw, 64px);
+  line-height: 1.05;
+}
+
+.storyContent p {
+  margin: 0 0 20px;
+  color: $text-light;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.storyVisual {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.storyVisual img {
+  object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .story {
+    padding: 80px 0;
+  }
+
+  .storyGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .storyContent {
+    max-width: 700px;
+  }
+
+  .storyVisual {
+    min-height: 400px;
+  }
+}
+
 @media (max-width: 640px) {
   .hero {
     padding: 110px 0 70px;
   }
 
   .hero p {
+    font-size: 16px;
+  }
+
+  .story {
+    padding: 70px 0;
+  }
+
+  .storyVisual {
+    padding: 20px;
+
+    border-radius: 20px;
+  }
+
+  .storyContent h2 {
+    font-size: 44px;
+  }
+
+  .storyContent p {
     font-size: 16px;
   }
 }
