@@ -164,6 +164,33 @@ export default function AboutPage() {
           </div>
         </Container>
       </section>
+
+      <section className={styles.marquee}>
+        <div className={styles.marqueeTrack}>
+          <span>Пояснюємо складне простою мовою</span>
+          <span>•</span>
+          <span>Мінігрупи ± 4 учні</span>
+          <span>•</span>
+          <span>Мова для реального життя</span>
+          <span>•</span>
+          <span>Дружнє середовище</span>
+          <span>•</span>
+          <span>Інтерактив замість зубріння</span>
+          <span>•</span>
+
+          {/* Повторюємо, для плавного безперервного руху */}
+          <span>Пояснюємо складне простою мовою</span>
+          <span>•</span>
+          <span>Мінігрупи ± 4 учні</span>
+          <span>•</span>
+          <span>Мова для реального життя</span>
+          <span>•</span>
+          <span>Дружнє середовище</span>
+          <span>•</span>
+          <span>Інтерактив замість зубріння</span>
+          <span>•</span>
+        </div>
+      </section>
     </main>
   );
 }

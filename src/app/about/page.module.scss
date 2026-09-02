@@ -217,6 +217,54 @@
   line-height: 1.7;
 }
 
+.marquee {
+  width: 100%;
+
+  overflow: hidden;
+
+  padding: 24px 0;
+
+  background: $accent;
+
+  color: white;
+}
+
+.marqueeTrack {
+  display: flex;
+
+  width: max-content;
+
+  align-items: center;
+
+  gap: 24px;
+
+  white-space: nowrap;
+
+  animation: marquee 25s linear infinite;
+}
+
+.marqueeTrack span {
+  font-family: var(--font-cormorant);
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
 @media (max-width: 992px) {
   .story {
     padding: 80px 0;
@@ -337,5 +385,19 @@
 
   .whyItem h3 {
     font-size: 25px;
+  }
+
+  .marquee {
+    padding: 20px 0;
+  }
+
+  .marqueeTrack {
+    gap: 18px;
+
+    animation-duration: 20s;
+  }
+
+  .marqueeTrack span {
+    font-size: 23px;
   }
 }
