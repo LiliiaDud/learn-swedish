@@ -284,7 +284,6 @@
 .quote {
   display: block;
   margin-bottom: 10px;
-
   color: $accent;
   font-family: var(--font-cormorant);
   font-size: 72px;
@@ -293,7 +292,6 @@
 
 .teacherQuote {
   margin: 0 0 30px;
-
   color: $primary;
   font-family: var(--font-cormorant);
   font-size: 28px;
@@ -302,7 +300,6 @@
 
 .teacherInfo h3 {
   margin: 0 0 7px;
-
   color: $primary;
   font-family: var(--font-cormorant);
   font-size: 28px;
@@ -322,10 +319,8 @@
   grid-template-columns: 0.8fr 1.2fr;
   gap: 50px;
   align-items: center;
-
   margin-top: 100px;
   padding: 30px;
-
   background: $background;
   border-radius: 28px;
 }
@@ -336,7 +331,6 @@
 
 .teamPhotoContent h2 {
   margin: 0 0 25px;
-
   color: $primary;
   font-family: var(--font-cormorant);
   font-size: clamp(42px, 4vw, 58px);
@@ -346,7 +340,6 @@
 .teamPhotoContent p {
   max-width: 380px;
   margin: 0;
-
   color: $text-light;
   font-size: 16px;
   line-height: 1.8;
@@ -355,9 +348,8 @@
 .teamHeart {
   display: block;
   margin-top: 45px;
-
   color: $accent;
-  font-size: 52px;
+  font-size: 32px;
   line-height: 1;
 }
 
@@ -374,35 +366,24 @@
 
 .marquee {
   width: 100%;
-
   overflow: hidden;
-
   padding: 24px 0;
-
   background: $accent;
-
   color: white;
 }
 
 .marqueeTrack {
   display: flex;
-
   width: max-content;
-
   align-items: center;
-
   gap: 24px;
-
   white-space: nowrap;
-
   animation: marquee 25s linear infinite;
 }
 
 .marqueeTrack span {
   font-family: var(--font-cormorant);
-
   font-size: 28px;
-
   line-height: 1;
 }
 
@@ -418,6 +399,57 @@
 
 .marquee:hover .marqueeTrack {
   animation-play-state: paused;
+}
+
+.motto {
+  padding: 25px 20px 20px;
+  overflow: hidden;
+}
+
+.mottoLine {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1250px;
+  min-height: 60px;
+  margin: 0 auto;
+}
+
+.mottoLine::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 35px;
+  top: 50%;
+  height: 35px;
+  border-top: 2px dashed $accent;
+  border-radius: 50%;
+  transform: translateY(-40%) rotate(-3deg);
+}
+
+.mottoText {
+  position: relative;
+  z-index: 1;
+  padding: 0 20px;
+  color: $accent;
+  font-family: var(--font-cormorant);
+  font-size: 28px;
+  font-style: italic;
+}
+
+.mottoArrow {
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: $accent;
+  font-size: 32px;
+  transform: rotate(-16deg);
 }
 
 @media (max-width: 992px) {
@@ -663,5 +695,28 @@
 
   .marqueeTrack span {
     font-size: 23px;
+  }
+
+  .motto {
+    padding: 35px 15px 15px;
+  }
+
+  .mottoLine {
+    min-height: 60px;
+  }
+
+  .mottoLine::before {
+    right: 25px;
+  }
+
+  .mottoText {
+    padding: 0 10px;
+    font-size: 23px;
+  }
+
+  .mottoArrow {
+    width: 35px;
+    height: 35px;
+    font-size: 25px;
   }
 }

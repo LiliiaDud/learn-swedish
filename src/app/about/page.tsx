@@ -165,6 +165,33 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <section className={styles.marquee}>
+        <div className={styles.marqueeTrack}>
+          <span>Пояснюємо складне простою мовою</span>
+          <span>•</span>
+          <span>Мінігрупи ± 4 учні</span>
+          <span>•</span>
+          <span>Мова для реального життя</span>
+          <span>•</span>
+          <span>Дружнє середовище</span>
+          <span>•</span>
+          <span>Інтерактив замість зубріння</span>
+          <span>•</span>
+
+          {/* Повторюємо, для плавного безперервного руху */}
+          <span>Пояснюємо складне простою мовою</span>
+          <span>•</span>
+          <span>Мінігрупи ± 4 учні</span>
+          <span>•</span>
+          <span>Мова для реального життя</span>
+          <span>•</span>
+          <span>Дружнє середовище</span>
+          <span>•</span>
+          <span>Інтерактив замість зубріння</span>
+          <span>•</span>
+        </div>
+      </section>
+
       <section className={styles.team}>
         <Container>
           <div className={styles.teamHeader}>
@@ -230,7 +257,7 @@ export default function AboutPage() {
                 </p>
 
                 <div className={styles.teacherInfo}>
-                  <h3>Олексій Нільсон</h3>
+                  <h3>Софія Нільсон</h3>
                   <span>Викладач шведської мови, носій мови</span>
                 </div>
               </div>
@@ -291,30 +318,11 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      <section className={styles.marquee}>
-        <div className={styles.marqueeTrack}>
-          <span>Пояснюємо складне простою мовою</span>
-          <span>•</span>
-          <span>Мінігрупи ± 4 учні</span>
-          <span>•</span>
-          <span>Мова для реального життя</span>
-          <span>•</span>
-          <span>Дружнє середовище</span>
-          <span>•</span>
-          <span>Інтерактив замість зубріння</span>
-          <span>•</span>
+      <section className={styles.motto}>
+        <div className={styles.mottoLine}>
+          <span className={styles.mottoText}>разом до нових висот</span>
 
-          {/* Повторюємо, для плавного безперервного руху */}
-          <span>Пояснюємо складне простою мовою</span>
-          <span>•</span>
-          <span>Мінігрупи ± 4 учні</span>
-          <span>•</span>
-          <span>Мова для реального життя</span>
-          <span>•</span>
-          <span>Дружнє середовище</span>
-          <span>•</span>
-          <span>Інтерактив замість зубріння</span>
-          <span>•</span>
+          <span className={styles.mottoArrow}>➤</span>
         </div>
       </section>
     </main>
