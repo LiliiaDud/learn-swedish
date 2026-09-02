@@ -165,6 +165,132 @@ export default function AboutPage() {
         </Container>
       </section>
 
+      <section className={styles.team}>
+        <Container>
+          <div className={styles.teamHeader}>
+            <div>
+              <span className={styles.eyebrow}>Наша команда</span>
+
+              <h2>Викладачі, які надихають на результат</h2>
+            </div>
+
+            <p>
+              Ми об&apos;єднали людей, які щиро люблять мову, навчання та
+              підтримку. Наші викладачі допоможуть вам повірити у свої сили та
+              впевнено рухатися до ваших цілей.
+            </p>
+          </div>
+
+          <div className={styles.teacherList}>
+            {/* Викладач 1 */}
+            <article className={styles.teacher}>
+              <div className={styles.teacherPhoto}>
+                <Image
+                  src="/images/about/teacher-1.jpg"
+                  alt="Викладач шведської мови"
+                  fill
+                  sizes="(max-width: 992px) 100vw, 40vw"
+                />
+              </div>
+
+              <div className={styles.teacherContent}>
+                <span className={styles.quote}>“</span>
+
+                <p className={styles.teacherQuote}>
+                  Моя мета — зробити шведську зрозумілою, живою та цікавою. На
+                  заняттях ми багато говоримо, сміємося та не боїмося помилок —
+                  саме так народжується впевненість.
+                </p>
+
+                <div className={styles.teacherInfo}>
+                  <h3>Марія Іваненко</h3>
+                  <span>Викладач шведської мови</span>
+                </div>
+              </div>
+            </article>
+
+            {/* Викладач 2 */}
+            <article className={styles.teacher}>
+              <div className={styles.teacherPhoto}>
+                <Image
+                  src="/images/about/teacher-2.jpg"
+                  alt="Викладач шведської мови"
+                  fill
+                  sizes="(max-width: 992px) 100vw, 40vw"
+                />
+              </div>
+
+              <div className={styles.teacherContent}>
+                <span className={styles.quote}>“</span>
+
+                <p className={styles.teacherQuote}>
+                  Я допомагаю студентам не лише вивчати мову, а й розуміти
+                  шведську культуру та мислення. Це відкриває нові можливості у
+                  спілкуванні та житті у Швеції.
+                </p>
+
+                <div className={styles.teacherInfo}>
+                  <h3>Олексій Нільсон</h3>
+                  <span>Викладач шведської мови, носій мови</span>
+                </div>
+              </div>
+            </article>
+
+            {/* Викладач 3 */}
+            <article className={styles.teacher}>
+              <div className={styles.teacherPhoto}>
+                <Image
+                  src="/images/about/teacher-3.jpg"
+                  alt="Викладач шведської мови"
+                  fill
+                  sizes="(max-width: 992px) 100vw, 40vw"
+                />
+              </div>
+
+              <div className={styles.teacherContent}>
+                <span className={styles.quote}>“</span>
+
+                <p className={styles.teacherQuote}>
+                  Я вірю, що навчання має бути теплим і надихаючим. Створюю
+                  дружню атмосферу, де кожен може бути собою та сміливо
+                  практикувати шведську.
+                </p>
+
+                <div className={styles.teacherInfo}>
+                  <h3>Анастасія Ларссон</h3>
+                  <span>Викладач шведської мови</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          {/* Уся команда */}
+          <div className={styles.teamPhotoSection}>
+            <div className={styles.teamPhotoContent}>
+              <span className={styles.eyebrow}>Разом ми — сила</span>
+
+              <h2>Наша команда</h2>
+
+              <p>
+                Ми підтримуємо одне одного, постійно розвиваємося та створюємо
+                найкращі умови для вашого навчання.
+              </p>
+
+              <span className={styles.teamHeart}>♡</span>
+            </div>
+
+            <div className={styles.teamPhoto}>
+              <Image
+                src="/images/about/team.jpg"
+                alt="Команда Learn Swedish"
+                fill
+                sizes="(max-width: 992px) 100vw, 60vw"
+              />
+            </div>
+          </div>
+        </Container>
+      </section>
+
       <section className={styles.marquee}>
         <div className={styles.marqueeTrack}>
           <span>Пояснюємо складне простою мовою</span>
