@@ -65,6 +65,112 @@ export default function ContactsPage() {
           </div>
         </Container>
       </section>
+      <section className={styles.marquee}>
+        <div className={styles.marqueeTrack}>
+          <span>Залишайся з нами на зв'язку</span>
+          <span>•</span>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+
+          <span>•</span>
+
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+
+          <span>•</span>
+
+          <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TikTok
+          </a>
+
+          <span>•</span>
+
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer">
+            Telegram
+          </a>
+
+          <span>•</span>
+
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <span>•</span>
+
+          {/* Повторюємо для плавного безперервного руху */}
+
+          <span>Залишайся з нами на зв'язку</span>
+          <span>•</span>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Facebook
+          </a>
+
+          <span>•</span>
+
+          <a
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+
+          <span>•</span>
+
+          <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            TikTok
+          </a>
+
+          <span>•</span>
+
+          <a href="https://t.me/" target="_blank" rel="noopener noreferrer">
+            Telegram
+          </a>
+
+          <span>•</span>
+
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Instagram
+          </a>
+
+          <span>•</span>
+
+          <span>Залишайся з нами на зв'язку</span>
+          <span>•</span>
+        </div>
+      </section>
     </main>
   );
 }

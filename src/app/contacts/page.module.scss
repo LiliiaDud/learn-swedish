@@ -138,6 +138,60 @@
   border-radius: 24px;
 }
 
+.marquee {
+  width: 100%;
+  overflow: hidden;
+
+  padding: 28px 0;
+
+  background: $background;
+  color: $accent;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 26px;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+
+.marqueeTrack span,
+.marqueeTrack a {
+  font-family: var(--font-cormorant);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.marqueeTrack a {
+  color: $primary;
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.marqueeTrack a:hover {
+  color: $accent;
+  opacity: 0.7;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
 @media (max-width: 992px) {
   .hero {
     padding: 130px 0 70px;
@@ -183,5 +237,19 @@
     padding: 24px 18px;
 
     border-radius: 18px;
+  }
+
+  .marquee {
+    padding: 20px 0;
+  }
+
+  .marqueeTrack {
+    gap: 18px;
+
+    animation-duration: 20s;
+  }
+
+  .marqueeTrack span {
+    font-size: 23px;
   }
 }
