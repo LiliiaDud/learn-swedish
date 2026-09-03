@@ -17,7 +17,26 @@ export default function CoursesPage() {
           </div>
         </Container>
       </section>
+      <section className={styles.marquee} aria-label="Надихаємо освітою">
+        <div className={styles.marqueeTrack}>
+          <span>Надихаємо освітою</span>
+          <span className={styles.icon}>✦</span>
+          <span>Відкриваємо нові можливості</span>
+          <span className={styles.icon}>✦</span>
+          <span>Надихаємо освітою</span>
+          <span className={styles.icon}>✦</span>
+          <span>Відкриваємо нові можливості</span>
+          <span className={styles.icon}>✦</span>
 
+          {/* Повторюємо контент для безперервної анімації */}
+          <span>Надихаємо освітою</span>
+          <span className={styles.icon}>✦</span>
+          <span>Відкриваємо нові можливості</span>
+          <span className={styles.icon}>✦</span>
+          <span>Надихаємо освітою</span>
+          <span className={styles.icon}>✦</span>
+        </div>
+      </section>
       <CoursesList />
     </main>
   );
