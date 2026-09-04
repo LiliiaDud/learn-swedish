@@ -16,11 +16,7 @@ export default function ConversationCoursePage() {
                 Learn Swedish · Conversation
               </span>
 
-              <h1>
-                Розмовні
-                <br />
-                курси
-              </h1>
+              <h1>Розмовні курси</h1>
 
               <p>
                 Більше говоримо, менше боїмося помилок. Практикуємо шведську у
@@ -84,6 +80,38 @@ export default function ConversationCoursePage() {
 
           <span>•</span>
         </div>
+      </section>
+
+      <section className={styles.forWhom}>
+        <Container>
+          <div className={styles.forWhomHeader}>
+            <h2>Тобі підійде курс, якщо:</h2>
+          </div>
+
+          <div className={styles.forWhomGrid}>
+            <article className={styles.forWhomCard}>
+              <span className={styles.cardIcon}>↗</span>
+
+              <p>
+                Хочеш говорити шведською швидко, природно та без довгих пауз.
+              </p>
+            </article>
+
+            <article className={styles.forWhomCard}>
+              <span className={styles.cardIcon}>♡</span>
+
+              <p>Маєш базу, але не вистачає впевненості у спілкуванні.</p>
+            </article>
+
+            <article className={styles.forWhomCard}>
+              <span className={styles.cardIcon}>✦</span>
+
+              <p>
+                Прагнеш звучати як носій і легко підтримувати будь-яку розмову.
+              </p>
+            </article>
+          </div>
+        </Container>
       </section>
     </main>
   );
