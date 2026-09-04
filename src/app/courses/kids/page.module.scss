@@ -1,0 +1,526 @@
+@use "../../../styles/variables" as *;
+
+.hero {
+  padding: 120px 0 90px;
+  background: white;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 50px;
+  min-height: 650px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 22px;
+
+  color: $accent;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin: 0 0 30px;
+
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(58px, 7vw, 88px);
+  font-weight: 500;
+  line-height: 0.92;
+}
+
+.heroContent p {
+  max-width: 500px;
+  margin: 0 0 35px;
+
+  color: $text-light;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 15px 28px;
+
+  border-radius: 999px;
+  background: $primary;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.button:hover {
+  background: $accent;
+  transform: translateY(-2px);
+}
+
+.heroImage {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+}
+
+.heroImage img {
+  object-fit: contain;
+  object-position: center;
+}
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 26px 0;
+
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+
+  background: white;
+  color: $accent;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 24px;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+
+.marqueeTrack span {
+  font-family: var(--font-cormorant);
+  font-size: 28px;
+  font-style: italic;
+  line-height: 1;
+}
+
+.marqueeTrack .icon {
+  font-size: 20px;
+  font-style: normal;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+.forWhom {
+  padding: 110px 0;
+  background: white;
+}
+
+.forWhomHeader {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 65px;
+}
+
+.forWhomHeader h2 {
+  margin: 0;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(46px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.forWhomHeader > p {
+  max-width: 450px;
+  margin: 0;
+  color: $text-light;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.forWhomGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.forWhomCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  min-height: 230px;
+  padding: 35px;
+  background: white;
+  border-radius: 24px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.forWhomCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(54, 65, 75, 0.08);
+}
+
+// .cardIcon {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   width: 48px;
+//   height: 48px;
+//   margin-bottom: 35px;
+
+//   border-radius: 50%;
+//   background: white;
+
+//   color: $accent;
+//   font-size: 22px;
+// }
+
+.forWhomCard h3 {
+  margin: 0 0 15px;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.forWhomCard p {
+  margin: 0;
+  color: $text-light;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.cardAge {
+  padding-top: 25px;
+  color: $accent;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.how {
+  padding: 110px 0;
+  background: $background;
+}
+
+.howHeader {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.howHeader h2 {
+  margin: 0;
+
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(46px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.howHeader > p {
+  max-width: 450px;
+  margin: 0;
+
+  color: $text-light;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.howList {
+  display: flex;
+  flex-direction: column;
+}
+
+.howItem {
+  display: grid;
+  grid-template-columns: 80px 1fr 50px;
+  gap: 30px;
+  align-items: center;
+
+  padding: 30px 0;
+
+  border-top: 1px solid $border;
+
+  transition: padding 0.3s ease;
+}
+
+.howItem:last-child {
+  border-bottom: 1px solid $border;
+}
+
+.howItem:hover {
+  padding-inline: 15px;
+}
+
+.number {
+  color: $accent;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.howItem h3 {
+  margin: 0 0 8px;
+
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.howItem p {
+  max-width: 620px;
+  margin: 0;
+
+  color: $text-light;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.itemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid $border;
+  border-radius: 50%;
+
+  color: $accent;
+  font-family: var(--font-cormorant);
+  font-size: 22px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+.howItem:hover .itemIcon {
+  background: white;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 100px 0 70px;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    min-height: auto;
+  }
+
+  .heroContent {
+    max-width: 700px;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(58px, 10vw, 78px);
+  }
+
+  .heroImage {
+    min-height: 450px;
+  }
+
+  .forWhom {
+    padding: 90px 0;
+  }
+
+  .forWhomHeader {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .forWhomHeader > p {
+    max-width: 600px;
+  }
+
+  .forWhomGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .forWhomCard {
+    min-height: 180px;
+  }
+  //   .forWhomCard:last-child {
+  //     grid-column: 1 / -1;
+  //   }
+
+  .how {
+    padding: 90px 0;
+  }
+
+  .howHeader {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 55px;
+  }
+
+  .howHeader > p {
+    max-width: 600px;
+  }
+
+  .howItem {
+    grid-template-columns: 60px 1fr 45px;
+    gap: 20px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 90px 0 50px;
+  }
+
+  .heroGrid {
+    gap: 10px;
+  }
+
+  .heroContent h1 {
+    margin-bottom: 25px;
+    font-size: 54px;
+  }
+
+  .heroContent p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .heroImage {
+    min-height: 320px;
+    margin-top: 10px;
+  }
+
+  .button {
+    padding: 14px 24px;
+  }
+
+  .marquee {
+    padding: 22px 0;
+  }
+
+  .marqueeTrack {
+    gap: 18px;
+    animation-duration: 22s;
+  }
+
+  .marqueeTrack span {
+    font-size: 23px;
+  }
+
+  .marqueeTrack .icon {
+    font-size: 16px;
+  }
+  .forWhom {
+    padding: 75px 0;
+  }
+
+  .forWhomHeader {
+    margin-bottom: 40px;
+  }
+
+  .forWhomHeader h2 {
+    font-size: 46px;
+  }
+
+  .forWhomHeader > p {
+    font-size: 16px;
+  }
+
+  .forWhomCard:last-child {
+    grid-column: auto;
+  }
+
+  .forWhomCard {
+    padding: 20px 24px;
+    border-radius: 20px;
+  }
+
+  .cardIcon {
+    margin-bottom: 28px;
+  }
+
+  .forWhomCard h3 {
+    font-size: 29px;
+  }
+
+  .how {
+    padding: 75px 0;
+  }
+
+  .howHeader {
+    margin-bottom: 40px;
+  }
+
+  .howHeader h2 {
+    font-size: 46px;
+  }
+
+  .howHeader > p {
+    font-size: 16px;
+  }
+
+  .howItem {
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+
+    padding: 25px 0;
+  }
+
+  .howItem:hover {
+    padding-inline: 0;
+  }
+
+  .howItem h3 {
+    font-size: 28px;
+  }
+
+  .howItem p {
+    font-size: 14px;
+  }
+
+  .itemIcon {
+    display: none;
+  }
+}
