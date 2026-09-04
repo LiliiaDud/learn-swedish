@@ -83,7 +83,7 @@ export default function KidsCoursePage() {
                 сформувати впевненість у спілкуванні.
               </p>
 
-              <span className={styles.cardAge}>6–10 років</span>
+              <span className={styles.cardAge}>7–10 років</span>
             </article>
 
             <article className={styles.forWhomCard}>
@@ -190,6 +190,77 @@ export default function KidsCoursePage() {
 
               <span className={styles.itemIcon}>→</span>
             </article>
+          </div>
+        </Container>
+      </section>
+
+      <section className={styles.format}>
+        <Container>
+          <div className={styles.formatHeader}>
+            <div>
+              <span className={styles.eyebrow}>Формат навчання</span>
+
+              <h2>
+                Регулярні заняття, зрозуміла програма та підтримка викладача
+              </h2>
+            </div>
+
+            <p>
+              Урок складається з різноманітних блоків, які допомагають дитині
+              розвивати всі мовні навички — слухання, говоріння, читання та
+              письмо.
+            </p>
+          </div>
+
+          <div className={styles.formatGrid}>
+            {/* Основні деталі */}
+            <div className={styles.details}>
+              <div className={styles.detailItem}>
+                <span>Формат</span>
+                <strong>Онлайн</strong>
+                <p>Заняття у Zoom, 2 рази на тиждень.</p>
+              </div>
+
+              <div className={styles.detailItem}>
+                <span>Тривалість</span>
+                <strong>1 – 1,5 години</strong>
+                <p>Для дітей – 1 година.</p>
+                <p>Для підлітків – 1,5 години.</p>
+              </div>
+
+              <div className={styles.detailItem}>
+                <span>Групи</span>
+                <strong>Невеликі групи</strong>
+                <p>
+                  Достатньо уваги кожній дитині та багато можливостей говорити.
+                </p>
+              </div>
+
+              <div className={styles.detailItem}>
+                <span>Рівень</span>
+                <strong>A1 – B2</strong>
+                <p>Підбираємо групу відповідно до рівня знань.</p>
+              </div>
+            </div>
+
+            {/* Вартість */}
+            <div className={styles.priceCard}>
+              <span className={styles.priceLabel}>Вартість навчання</span>
+
+              <div className={styles.price}>
+                <strong>Уточнюється</strong>
+              </div>
+
+              <p>
+                Залиште заявку, і ми розповімо про актуальні групи, розклад та
+                вартість навчання.
+              </p>
+
+              <Link href="/contacts?course=kids" className={styles.priceButton}>
+                Записатися на курс
+                <span>→</span>
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
