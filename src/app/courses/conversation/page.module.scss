@@ -1,0 +1,190 @@
+@use "../../../styles/variables" as *;
+
+.hero {
+  padding: 120px 0 90px;
+  background: white;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  align-items: center;
+  gap: 60px;
+  min-height: 650px;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 22px;
+  color: $accent;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin: 0 0 30px;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(58px, 7vw, 88px);
+  font-weight: 500;
+  line-height: 0.92;
+}
+
+.heroContent p {
+  max-width: 500px;
+  margin: 0 0 35px;
+  color: $text-light;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 28px;
+  border-radius: 999px;
+  background: $primary;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.button:hover {
+  background: $accent;
+  transform: translateY(-2px);
+}
+
+.heroImage {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.heroImage img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  padding: 26px 0;
+  //   border-top: 1px solid $border;
+  //   border-bottom: 1px solid $border;
+  background: white;
+  color: $accent;
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 24px;
+  white-space: nowrap;
+  animation: marquee 28s linear infinite;
+}
+
+.marqueeTrack span {
+  font-family: var(--font-cormorant);
+  font-size: 28px;
+  font-style: italic;
+  line-height: 1;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee:hover .marqueeTrack {
+  animation-play-state: paused;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .hero {
+    padding: 100px 0 70px;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    min-height: auto;
+  }
+
+  .heroContent {
+    max-width: 700px;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(58px, 10vw, 78px);
+  }
+
+  .heroImage {
+    min-height: 500px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .hero {
+    padding: 90px 0 50px;
+  }
+
+  .heroGrid {
+    gap: 30px;
+  }
+
+  .heroContent h1 {
+    margin-bottom: 25px;
+    font-size: 54px;
+  }
+
+  .heroContent p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .heroImage {
+    min-height: 320px;
+    border-radius: 20px;
+  }
+
+  .button {
+    padding: 14px 24px;
+  }
+
+  .marquee {
+    padding: 22px 0;
+  }
+
+  .marqueeTrack {
+    gap: 18px;
+    animation-duration: 22s;
+  }
+
+  .marqueeTrack span {
+    font-size: 23px;
+  }
+}
