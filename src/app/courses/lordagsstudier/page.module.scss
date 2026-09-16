@@ -1,0 +1,294 @@
+@use "../../../styles/variables" as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/courses/lordagsstudier.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.01);
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(35, 29, 25, 0.72) 0%,
+    rgba(35, 29, 25, 0.48) 38%,
+    rgba(35, 29, 25, 0.12) 75%,
+    rgba(35, 29, 25, 0.05) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+  padding: 150px 0 120px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 25px;
+  color: $accent;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin: 0 0 30px;
+  color: white;
+  font-family: var(--font-cormorant);
+  font-size: clamp(60px, 7vw, 90px);
+  font-weight: 500;
+  line-height: 0.92;
+}
+
+.heroContent p {
+  max-width: 500px;
+  margin: 0 0 25px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.heroNote {
+  display: inline-block;
+  padding: 9px 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.about {
+  padding: 130px 0;
+  background: white;
+}
+
+.aboutContent {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.aboutContent h2 {
+  margin: 0 0 30px;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(52px, 6vw, 76px);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.aboutContent > p {
+  max-width: 650px;
+  margin: 0 auto 18px;
+  color: $text-light;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.aboutNote {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 25px;
+  max-width: 650px;
+  margin: 45px auto 0;
+  padding: 25px 0;
+  border-top: 1px solid $border;
+  border-bottom: 1px solid $border;
+  text-align: left;
+}
+
+.aboutNote > span {
+  color: $accent;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+.aboutNote p {
+  margin: 0;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: 25px;
+  line-height: 1.25;
+}
+
+.access {
+  padding: 130px 0;
+  background: $background;
+}
+
+.accessHeader {
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+.accessHeader h2 {
+  margin: 0;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(52px, 6vw, 76px);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.accessGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.accessBlock {
+  min-height: 300px;
+  padding: 45px;
+  background: white;
+}
+
+.accessBlock h3 {
+  margin: 0 0 18px;
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.accessBlock p {
+  max-width: 480px;
+  margin: 0;
+  color: $text-light;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+@media (max-width: 992px) {
+  .heroContent {
+    padding: 130px 0 100px;
+  }
+
+  .heroContent h1 {
+    font-size: clamp(54px, 8vw, 76px);
+  }
+
+  .about {
+    padding: 100px 0;
+  }
+
+  .access {
+    padding: 100px 0;
+  }
+
+  .accessGrid {
+    gap: 30px;
+  }
+
+  .accessHeader {
+    margin-bottom: 50px;
+  }
+
+  .accessBlock {
+    min-height: 280px;
+    padding: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 100vh;
+  }
+
+  .heroImage {
+    background-position: center center;
+  }
+
+  .heroOverlay {
+    background: linear-gradient(
+      180deg,
+      rgba(35, 29, 25, 0.15) 0%,
+      rgba(35, 29, 25, 0.4) 40%,
+      rgba(35, 29, 25, 0.8) 100%
+    );
+  }
+
+  .heroContent {
+    padding: 120px 0 70px;
+  }
+
+  .heroContent h1 {
+    margin-bottom: 25px;
+    font-size: 52px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .heroNote {
+    font-size: 11px;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .aboutContent h2 {
+    font-size: 48px;
+  }
+
+  .aboutContent > p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .aboutNote {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+    margin-top: 35px;
+  }
+
+  .aboutNote p {
+    font-size: 22px;
+  }
+
+  .access {
+    padding: 80px 0;
+  }
+
+  .accessHeader h2 {
+    font-size: 48px;
+  }
+
+  .accessGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .accessBlock {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .accessBlock h3 {
+    font-size: 30px;
+  }
+
+  .accessBlock p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
