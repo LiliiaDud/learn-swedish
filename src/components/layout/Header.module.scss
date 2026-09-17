@@ -4,11 +4,8 @@
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100%;
-
   z-index: 100;
-
   transition: 0.35s ease;
 }
 
@@ -32,7 +29,6 @@
 
 .logo {
   color: inherit;
-
   display: flex;
   align-items: center;
   gap: 12px;
@@ -88,21 +84,66 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-
   padding: 24px 0;
-
   a {
     font-size: 18px;
     color: $primary;
   }
 }
 
-.mobileButton {
-  background: $accent;
-  color: white;
+.mobileCourses {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileCoursesTrigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
   border: none;
-  border-radius: 50px;
-  padding: 14px;
+  background: transparent;
+  color: $primary;
+  font-size: 18px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mobileCoursesTrigger svg {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.mobileCoursesMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 12px;
+  margin-left: 10px;
+  padding-left: 18px;
+  border-left: 1px solid $border;
+}
+
+.mobileCoursesMenu a {
+  display: block;
+  padding: 9px 0;
+  color: $text-light;
+  font-size: 15px;
+  line-height: 1.4;
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.mobileCoursesMenu a:hover {
+  color: $accent;
+  padding-left: 4px;
 }
 
 /* ---------- Tablet ---------- */
@@ -110,13 +151,10 @@
 @media (min-width: 768px) {
   .cta {
     display: block;
-
     background: $accent;
     color: white;
-
     border: none;
     border-radius: 50px;
-
     padding: 12px 20px;
     cursor: pointer;
   }
@@ -132,7 +170,6 @@
   .nav {
     display: flex;
     gap: 32px;
-
     align-items: center;
 
     a,
@@ -147,10 +184,8 @@
 
   .lang {
     display: block;
-
     border: 1px solid $border;
     background: white;
-
     border-radius: 50%;
     width: 42px;
     height: 42px;

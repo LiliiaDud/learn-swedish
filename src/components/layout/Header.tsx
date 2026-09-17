@@ -10,6 +10,7 @@ import styles from "./Header.module.scss";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
   const pathname = usePathname();
   const isHome = pathname === "/";
@@ -27,6 +28,11 @@ export default function Header() {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setIsCoursesOpen(false);
+  };
 
   return (
     <header
@@ -59,23 +65,91 @@ export default function Header() {
 
             <button
               className={styles.burger}
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsOpen((prev) => !prev)}
+              aria-label="Відкрити меню"
             >
               {isOpen ? <X size={26} /> : <Menu size={26} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {/* Mobile / Tablet menu */}
         {isOpen && (
           <div className={styles.mobileMenu}>
-            <Link href="/">Головна</Link>
-            <Link href="/courses">Курси</Link>
-            <Link href="/about">Про нас</Link>
-            <Link href="/blog">Блог</Link>
-            <Link href="/contacts">Контакти</Link>
+            <Link href="/" onClick={closeMobileMenu}>
+              Головна
+            </Link>
 
-            <button className={styles.mobileButton}>Пройти тест</button>
+            {/* Courses dropdown */}
+            <div className={styles.mobileCourses}>
+              <button
+                type="button"
+                className={styles.mobileCoursesTrigger}
+                onClick={() => setIsCoursesOpen((prev) => !prev)}
+              >
+                <span>Курси</span>
+
+                <ChevronDown
+                  size={20}
+                  className={isCoursesOpen ? styles.chevronOpen : ""}
+                />
+              </button>
+
+              {isCoursesOpen && (
+                <div className={styles.mobileCoursesMenu}>
+                  <Link href="/courses/adults" onClick={closeMobileMenu}>
+                    Курси для дорослих
+                  </Link>
+
+                  <Link href="/courses/kids" onClick={closeMobileMenu}>
+                    Для дітей та підлітків
+                  </Link>
+
+                  <Link href="/courses/individual" onClick={closeMobileMenu}>
+                    Індивідуальні заняття
+                  </Link>
+
+                  <Link href="/courses/conversation" onClick={closeMobileMenu}>
+                    Розмовні курси
+                  </Link>
+
+                  <Link href="/courses/exam" onClick={closeMobileMenu}>
+                    Підготовка до іспитів
+                  </Link>
+
+                  <Link href="/courses/fika" onClick={closeMobileMenu}>
+                    Fika клуб
+                  </Link>
+
+                  <Link href="/courses/book-club" onClick={closeMobileMenu}>
+                    Bookclub
+                  </Link>
+
+                  <Link
+                    href="/courses/lordagsstudier"
+                    onClick={closeMobileMenu}
+                  >
+                    Lördagsstudier
+                  </Link>
+
+                  <Link href="/courses/test" onClick={closeMobileMenu}>
+                    Тест рівня
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link href="/about" onClick={closeMobileMenu}>
+              Про нас
+            </Link>
+
+            <Link href="/blog" onClick={closeMobileMenu}>
+              Блог
+            </Link>
+
+            <Link href="/contacts" onClick={closeMobileMenu}>
+              Контакти
+            </Link>
           </div>
         )}
       </Container>
