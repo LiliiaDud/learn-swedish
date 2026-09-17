@@ -33,15 +33,15 @@
 
 .menu {
   position: absolute;
-  top: 38px;
+  top: 100%;
   left: -20px;
+  z-index: 100;
 
   width: 240px;
 
   background: white;
   border-radius: 18px;
   border: 1px solid $border;
-
   box-shadow: $shadow;
 
   padding: 12px;
@@ -49,6 +49,17 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transform: translateY(8px);
+
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
 
   a {
     padding: 10px 12px;
@@ -59,4 +70,11 @@
     background: $surface-secondary;
     color: $primary;
   }
+}
+
+.menuOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
 }
