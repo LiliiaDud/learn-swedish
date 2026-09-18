@@ -1,0 +1,65 @@
+@use "../../styles/variables" as *;
+
+.hero {
+  padding: 140px 0 90px;
+  background: $background;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 25px;
+  color: $accent;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroContent h1 {
+  margin: 0 0 30px;
+
+  color: $primary;
+  font-family: var(--font-cormorant);
+  font-size: clamp(60px, 8vw, 90px);
+  font-weight: 500;
+  line-height: 0.9;
+}
+
+.heroContent p {
+  max-width: 600px;
+  margin: 0 auto;
+
+  color: $text-light;
+
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.testSection {
+  padding: 80px 0 120px;
+  background: white;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 140px 0 70px;
+  }
+
+  .heroContent h1 {
+    font-size: 52px;
+  }
+
+  .heroContent p {
+    font-size: 16px;
+  }
+
+  .testSection {
+    padding: 50px 0 80px;
+  }
+}
