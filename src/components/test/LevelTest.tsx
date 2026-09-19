@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { testQuestions } from "@/data/testQuestions";
-
+import { testResults } from "@/data/testResults";
 import { getTestLevel } from "@/utils/testResult";
 
 import styles from "./LevelTest.module.scss";
@@ -74,7 +74,14 @@ export default function LevelTest() {
   };
 
   // Якщо тест завершений — показуємо результат.
-  if (isFinished) {
+  if (isFinished && resultLevel) {
+    const result = testResults[resultLevel];
+
+    const totalCorrect = Object.values(levelScores).reduce(
+      (total, value) => total + value,
+      0,
+    );
+
     return (
       <section className={styles.result}>
         <p className={styles.resultLabel}>Тест завершено</p>
@@ -82,22 +89,25 @@ export default function LevelTest() {
         <h2>
           Ваш орієнтовний рівень:
           <br />
-          {resultLevel}
+          {result.level}
         </h2>
 
         <p>
           Правильних відповідей:{" "}
-          {Object.values(levelScores).reduce(
-            (total, value) => total + value,
-            0,
-          )}{" "}
-          з {testQuestions.length}
+          <strong>
+            {totalCorrect} з {testQuestions.length}
+          </strong>
         </p>
 
-        <p>
-          Це попередній результат тесту. Він допоможе зорієнтуватися у вашому
-          рівні шведської мови.
-        </p>
+        <h3>{result.title}</h3>
+
+        <p>{result.description}</p>
+
+        <p>{result.recommendation}</p>
+
+        <a href={result.courseHref} className={styles.resultButton}>
+          {result.courseLabel}
+        </a>
       </section>
     );
   }
