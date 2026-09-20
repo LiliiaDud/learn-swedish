@@ -49,7 +49,6 @@ export default function Navigation() {
           <Link href="/courses/exam">Підготовка до іспитів</Link>
           <Link href="/courses/book-club">Bookclub</Link>
           <Link href="/courses/lordagsstudier">Lördagsstudier</Link>
-          <Link href="/courses/test">Тест рівня</Link>
         </div>
       </div>
 

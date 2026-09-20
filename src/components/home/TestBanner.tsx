@@ -16,7 +16,7 @@ export default function TestBanner() {
             </p>
           </div>
 
-          <Link href="/courses/test" className={styles.button}>
+          <Link href="/test" className={styles.button}>
             Пройти тест
           </Link>
         </div>

@@ -131,10 +131,6 @@ export default function Header() {
                   >
                     Lördagsstudier
                   </Link>
-
-                  <Link href="/courses/test" onClick={closeMobileMenu}>
-                    Тест рівня
-                  </Link>
                 </div>
               )}
             </div>
