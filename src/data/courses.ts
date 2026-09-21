@@ -5,14 +5,6 @@ export type Course = {
   level?: string;
   href: string;
   icon: string;
-
-  about?: string;
-  audience?: string;
-  program?: string[];
-
-  format?: string;
-  schedule?: string;
-  price?: string;
 };
 
 export const courses: Course[] = [

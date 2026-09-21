@@ -53,7 +53,7 @@ const courseOptions = [
     label: "Fika",
   },
   {
-    value: "saturday",
+    value: "lordagsstudier",
     label: "Самостійне навчання",
   },
   {
