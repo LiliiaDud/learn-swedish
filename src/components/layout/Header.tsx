@@ -59,7 +59,9 @@ export default function Header() {
 
           {/* Right side */}
           <div className={styles.actions}>
-            <button className={styles.cta}>Пройти тест</button>
+            <button className={styles.cta}>
+              <Link href="/test">Тест рівня</Link>
+            </button>
 
             <button className={styles.lang}>UA</button>
 
